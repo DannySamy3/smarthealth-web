@@ -12,6 +12,7 @@ import {
   Building2,
   FileCheck
 } from "lucide-react";
+import PhoneMockup from "@/components/PhoneMockup";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -85,74 +86,9 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Visual Hero Card Stack */}
+          {/* Right Visual Phone Mockup Column */}
           <div className={styles.rightCol}>
-            
-            <div className={styles.heroVisualCard}>
-              
-              <div className={styles.cardHeader}>
-                <div className={styles.cardHeaderTitle}>
-                  <Building2 size={18} className={styles.headerIcon} />
-                  <div>
-                    <h4>Smart Health Ecosystem</h4>
-                    <span className={styles.subText}>Live Platform Network</span>
-                  </div>
-                </div>
-                <span className={styles.badgeVerified}>
-                  <CheckCircle2 size={13} /> Active Node
-                </span>
-              </div>
-
-              <div className={styles.heroCardContent}>
-                
-                {/* Floating Metric 1: Emergency Ambulance */}
-                <div className={`${styles.floatingWidget} ${styles.widget1}`}>
-                  <div className={`${styles.widgetIcon} ${styles.iconAmbulance}`}>
-                    <Truck size={18} />
-                  </div>
-                  <div>
-                    <h5 className={styles.widgetTitle}>Emergency Ambulance</h5>
-                    <p className={styles.widgetSub}>One-Tap GPS Dispatch • En-Route</p>
-                  </div>
-                  <span className={styles.liveTag}>LIVE</span>
-                </div>
-
-                {/* Floating Metric 2: Doctor Chat */}
-                <div className={`${styles.floatingWidget} ${styles.widget2}`}>
-                  <div className={`${styles.widgetIcon} ${styles.iconDoctor}`}>
-                    <Users size={18} />
-                  </div>
-                  <div>
-                    <h5 className={styles.widgetTitle}>Doctor Consultation</h5>
-                    <p className={styles.widgetSub}>Verified Specialist • 1-on-1 Chat</p>
-                  </div>
-                  <span className={styles.onlineDot} />
-                </div>
-
-                {/* Floating Metric 3: TFDA Vault */}
-                <div className={`${styles.floatingWidget} ${styles.widget3}`}>
-                  <div className={`${styles.widgetIcon} ${styles.iconVault}`}>
-                    <FileCheck size={18} />
-                  </div>
-                  <div>
-                    <h5 className={styles.widgetTitle}>Regulatory Compliance Vault</h5>
-                    <p className={styles.widgetSub}>BRELA, TFDA & Expiry Batch Tracked</p>
-                  </div>
-                  <span className={styles.shieldTag}>
-                    <Shield size={12} /> Verified
-                  </span>
-                </div>
-
-              </div>
-
-              {/* Bottom Platform Bar */}
-              <div className={styles.heroCardFooter}>
-                <Smartphone size={15} className={styles.footerPhoneIcon} />
-                <span>Available on iOS App Store & Android Google Play Store</span>
-              </div>
-
-            </div>
-
+            <PhoneMockup activeRole="community" />
           </div>
 
         </div>
