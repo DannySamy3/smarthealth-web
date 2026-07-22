@@ -46,6 +46,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
+  display: inline-block;
+  padding-right: 0.15em;
+  padding-left: 0.05em;
+  margin-right: -0.1em;
 }
 
 .logoIcon {

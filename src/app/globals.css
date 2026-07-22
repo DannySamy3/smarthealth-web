@@ -10,14 +10,14 @@
   --bg-tertiary: #f1f5f9;    /* Soft neutral slate-100 */
   --bg-card: #ffffff;        /* Pure white cards */
   
-  /* Brand Accent Colors */
-  --brand-blue: #2563eb;
-  --brand-blue-hover: #1d4ed8;
-  --brand-cyan: #0284c7;     /* Sky/Cyan-600 for sharp text contrast on white */
+  /* Bolder, Richer & More Convincing Sapphire/Cobalt Palette */
+  --brand-blue: #1d4ed8;       /* Deep Cobalt Blue (Bold & Authoritative) */
+  --brand-blue-hover: #1e3a8a; /* Deep Royal Sapphire */
+  --brand-cyan: #0284c7;       /* Vivid Sky Blue for crisp contrast */
   --brand-cyan-hover: #0369a1;
   --brand-accent: #d97706;
   --brand-blue-light: #eff6ff;
-  --brand-blue-border: #bfdbfe;
+  --brand-blue-border: #93c5fd;
   
   /* Status Colors */
   --success: #15803d;
@@ -32,10 +32,10 @@
   --text-muted: #64748b;     /* Slate-500 */
   --text-light: #94a3b8;     /* Slate-400 */
   
-  /* Gradients */
-  --grad-primary: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+  /* Bolder High-Impact Gradients */
+  --grad-primary: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
   --grad-text: linear-gradient(135deg, #0f172a 30%, #1e293b 100%);
-  --grad-cyan-blue: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  --grad-cyan-blue: linear-gradient(135deg, #1e40af 0%, #1d4ed8 45%, #0284c7 100%);
   --grad-glow: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
   
   /* Borders and Dividers */
