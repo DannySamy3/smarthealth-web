@@ -32,14 +32,14 @@ export default function Features() {
     community: {
       id: "community",
       label: "Community Feed",
-      badge: "Shared Care Network",
-      title: "Collaborative Social Health & Media Feed",
-      description: "The core of Smart Health's user interaction. Verified healthcare professionals and patients connect in open chats, discuss health topics, and share rich media posts containing images and videos.",
+      badge: "SHARED CARE NETWORK",
+      title: "Collaborative Health Feed, Doctor Consultations & Emergency Network",
+      description: "Connect patients with verified healthcare professionals (MDs, Specialists, Nurses). Share medical insights, book appointments, broadcast prescription needs to local pharmacies, and request emergency ambulances.",
       bullets: [
-        "Share health topics with images & videos",
-        "Direct patient-to-professional chat rooms",
-        "Verified medical answers & feeds",
-        "Find My Meds & emergency ambulance pings"
+        "Verified provider credentials & license vault",
+        "Doctor search, appointments & 1-on-1 chats",
+        "\"Find My Meds\" prescription broadcasting & pharmacy bids",
+        "AI medical triage & emergency ambulance dispatch"
       ]
     },
     institution: {
