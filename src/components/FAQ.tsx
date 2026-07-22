@@ -47,13 +47,13 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className={styles.accordionContainer}>
+        <div className={`${styles.accordionContainer} reveal-on-scroll`}>
           {faqs.map((faq, idx) => {
             const isActive = activeIndex === idx;
             return (
               <div 
                 key={idx} 
-                className={`${styles.item} ${isActive ? styles.itemActive : ""} reveal-on-scroll delay-${(idx % 4) + 1}`}
+                className={`${styles.item} ${isActive ? styles.itemActive : ""}`}
                 id={`faq-item-${idx}`}
               >
                 <button 
@@ -72,8 +72,10 @@ export default function FAQ() {
                   className={`${styles.contentWrapper} ${isActive ? styles.contentWrapperOpen : ""}`}
                   aria-hidden={!isActive}
                 >
-                  <div className={styles.content}>
-                    <p>{faq.answer}</p>
+                  <div className={styles.contentInner}>
+                    <div className={styles.content}>
+                      <p>{faq.answer}</p>
+                    </div>
                   </div>
                 </div>
               </div>
