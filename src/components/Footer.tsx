@@ -21,7 +21,7 @@ export default function Footer() {
           <div className={styles.brandColumn}>
             <a href="#" className={styles.logo} onClick={(e) => handleLinkClick(e, "hero")}>
               <div className={styles.logoIcon}>
-                <HeartPulse size={22} strokeWidth={2.5} />
+                <img src="/images/logo.png" alt="Smart Health Logo" className={styles.logoImg} />
               </div>
               <span>Smart <em>Health</em></span>
             </a>

@@ -44,7 +44,7 @@ export default function Header() {
         <div className={styles.container}>
           <a href="/#hero" className={styles.logo} onClick={(e) => handleLinkClick(e, "hero")}>
             <div className={styles.logoIcon}>
-              <HeartPulse size={22} strokeWidth={2.5} />
+              <img src="/images/logo.png" alt="Smart Health Logo" className={styles.logoImg} />
             </div>
             <span>Smart <em>Health</em></span>
           </a>
@@ -90,7 +90,7 @@ export default function Header() {
         <div className={styles.drawerHeader}>
           <a href="/#hero" className={styles.logo} onClick={(e) => handleLinkClick(e, "hero")}>
             <div className={styles.logoIcon}>
-              <HeartPulse size={22} strokeWidth={2.5} />
+              <img src="/images/logo.png" alt="Smart Health Logo" className={styles.logoImg} />
             </div>
             <span>Smart <em>Health</em></span>
           </a>
