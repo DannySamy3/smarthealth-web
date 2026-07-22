@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { 
   ArrowRight, 
   Shield, 
@@ -10,149 +9,12 @@ import {
   Smartphone, 
   Truck, 
   Users, 
-  Activity,
-  Zap,
   Building2,
   FileCheck
 } from "lucide-react";
 import styles from "./Hero.module.css";
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  radius: number;
-}
-
 export default function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const mouseRef = useRef<{ x: number | null; y: number | null }>({ x: null, y: null });
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    let animationFrameId: number;
-    let particles: Particle[] = [];
-    const particleCount = 50;
-    const connectionDistance = 110;
-    const mouseConnectionDistance = 150;
-
-    const resizeCanvas = () => {
-      if (canvas && containerRef.current) {
-        canvas.width = containerRef.current.offsetWidth;
-        canvas.height = containerRef.current.offsetHeight;
-        initParticles();
-      }
-    };
-
-    const initParticles = () => {
-      particles = [];
-      const width = canvas.width;
-      const height = canvas.height;
-
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.7,
-          vy: (Math.random() - 0.5) * 0.7,
-          radius: Math.random() * 2 + 1,
-        });
-      }
-    };
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const width = canvas.width;
-      const height = canvas.height;
-      const mouse = mouseRef.current;
-
-      particles.forEach((p) => {
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if (p.x < 0 || p.x > width) p.vx = -p.vx;
-        if (p.y < 0 || p.y > height) p.vy = -p.vy;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(29, 78, 216, 0.35)";
-        ctx.fill();
-      });
-
-      for (let i = 0; i < particles.length; i++) {
-        const p1 = particles[i];
-
-        for (let j = i + 1; j < particles.length; j++) {
-          const p2 = particles[j];
-          const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
-
-          if (dist < connectionDistance) {
-            const alpha = (1 - dist / connectionDistance) * 0.12;
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(29, 78, 216, ${alpha})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
-          }
-        }
-
-        if (mouse.x !== null && mouse.y !== null) {
-          const distToMouse = Math.hypot(p1.x - mouse.x, p1.y - mouse.y);
-          if (distToMouse < mouseConnectionDistance) {
-            const alpha = (1 - distToMouse / mouseConnectionDistance) * 0.25;
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(2, 132, 199, ${alpha})`;
-            ctx.lineWidth = 1.0;
-            ctx.stroke();
-          }
-        }
-      }
-
-      animationFrameId = requestAnimationFrame(draw);
-    };
-
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-    animationFrameId = requestAnimationFrame(draw);
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!canvas) return;
-      const rect = canvas.getBoundingClientRect();
-      mouseRef.current.x = e.clientX - rect.left;
-      mouseRef.current.y = e.clientY - rect.top;
-    };
-
-    const handleMouseLeave = () => {
-      mouseRef.current.x = null;
-      mouseRef.current.y = null;
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("mousemove", handleMouseMove);
-      container.addEventListener("mouseleave", handleMouseLeave);
-    }
-
-    return () => {
-      window.removeEventListener("resize", resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
-      if (container) {
-        container.removeEventListener("mousemove", handleMouseMove);
-        container.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
-  }, []);
-
   const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
@@ -162,17 +24,7 @@ export default function Hero() {
   };
 
   return (
-    <section className={styles.hero} ref={containerRef} id="hero">
-      {/* Dynamic Background Concentric Orbits */}
-      <div className={styles.orbits} aria-hidden="true">
-        <div className={`${styles.orbitRing} ${styles.ring1}`}></div>
-        <div className={`${styles.orbitRing} ${styles.ring2}`}></div>
-        <div className={`${styles.orbitRing} ${styles.ring3}`}></div>
-      </div>
-
-      {/* Interactive Particle Field */}
-      <canvas ref={canvasRef} className={styles.particles} aria-hidden="true" />
-
+    <section className={styles.hero} id="hero">
       <div className="container">
         <div className={styles.splitGrid}>
           
