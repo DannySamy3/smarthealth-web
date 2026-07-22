@@ -84,14 +84,15 @@ export default function Features() {
     importer: {
       id: "importer",
       label: "Importer",
-      badge: "B2B Import Vault",
-      title: "Customs Permitting & Role-Targeted Ads",
-      description: "Importers manage B2B catalogs, track clinic orders, and run targeted ads in the professional feed (e.g. promoting surgical batches exclusively to Hospital Directors).",
+      badge: "B2B IMPORT VAULT & SOURCING",
+      title: "Customs Permitting, Global Sourcing & Targeted Ads",
+      description: "Importers source bulk products from manufacturers, manage TMDA/TFDA regulatory vaults, maintain batch inventory, and distribute directly to hospitals, clinics, and pharmacies.",
       bullets: [
-        "TFDA permit vaults",
-        "B2B purchase orders",
-        "Digital bulk catalogs",
-        "Role-targeted advertising"
+        "TMDA & TFDA compliance vaults",
+        "Upstream manufacturer import orders",
+        "Batch & strength inventory management",
+        "Downstream B2B sales & distribution",
+        "Role-targeted B2B advertising feed"
       ]
     },
     distributor: {
