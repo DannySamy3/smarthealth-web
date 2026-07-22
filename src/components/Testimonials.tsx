@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Quote, Shield, Building, Award, Heart } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "./Testimonials.module.css";
 
 interface Testimonial {
   quote: string;
   name: string;
   org: string;
-  icon: React.ReactNode;
+  image: string;
 }
 
 export default function Testimonials() {
@@ -16,28 +16,28 @@ export default function Testimonials() {
 
   const testimonials: Testimonial[] = [
     {
-      quote: "Smart Health was an exceptional partner in securing our supply lines. It quickly unified our multiple, incredibly different product batches into one clear, verified portal. Real-time cold-chain telemetry protects our vaccines daily.",
-      name: "Jacqueline Choice",
-      org: "Global Pharma Logistics Lead",
-      icon: <Award size={20} />
+      quote: "Automatically mapping TFDA permits and production serialization codes has saved hundreds of manual auditing hours. The workflow fits perfectly with our manufacturing lines.",
+      name: "Dr. Sarah Jenkins",
+      org: "Pharmaceutical Research Lead, Geneva Amox",
+      image: "/images/testimonials/sarah.png"
     },
     {
-      quote: "Our new shelf compliance is seamless. Checking and signing off on arriving shipments is extremely fast and transparent. Automated alerts prevent drug inventory gaps before they can affect our patients.",
-      name: "Dr. Mary Lwazi",
-      org: "City Health Clinic Pharmacy Director",
-      icon: <Building size={20} />
+      quote: "Smart Health was an exceptional partner in securing our supply lines. It quickly unified our multiple product batches into one clear, verified portal. Real-time cold-chain telemetry protects our vaccines daily.",
+      name: "Dr. David K. Mussa",
+      org: "Chief Medical Director, Regional Referral Hospital",
+      image: "/images/testimonials/david.png"
+    },
+    {
+      quote: "Our shelf compliance is seamless. Checking and signing off on arriving shipments is extremely fast and transparent. Automated alerts prevent drug inventory gaps before they can affect our patients.",
+      name: "Amira Otieno",
+      org: "Licensed Lead Pharmacist, Global Health Dispensary",
+      image: "/images/testimonials/amira.png"
     },
     {
       quote: "The system audit logs provide immediate traceability reports. Toggling node access status and verifying regulatory permits happens in seconds. We have had zero compliance gaps since deploying the nodes.",
-      name: "Dr. Mark Vance",
-      org: "Federal Medical Compliance Board",
-      icon: <Shield size={20} />
-    },
-    {
-      quote: "Automatically mapping TFDA permits and production serialization codes has saved hundreds of manual auditing hours. The workflow fits perfectly with our manufacturing lines.",
-      name: "Sarah Jenkins",
-      org: "Geneva Amox Batch Production Node",
-      icon: <Heart size={20} />
+      name: "Marcus Vance",
+      org: "Supply Chain & Logistics Director, Apex Pharma",
+      image: "/images/testimonials/marcus.png"
     }
   ];
 
@@ -65,12 +65,15 @@ export default function Testimonials() {
     <section className={styles.section} id="testimonials">
       <div className="container">
         
-        <div className={styles.header}>
+        <div className={`${styles.header} reveal-on-scroll`}>
           <span className="section-label">Testimonials</span>
-          <h2 className={styles.heading}>Trusted by Healthcare <em>Professionals</em></h2>
+          <h2 className={styles.heading}>
+            Trusted by Healthcare<br />
+            <em>Professionals</em>
+          </h2>
         </div>
 
-        <div className={`${styles.sliderContainer} reveal-on-scroll`}>
+        <div className={`${styles.carousel} reveal-on-scroll delay-1`}>
           <button 
             className={`${styles.arrow} ${styles.arrowPrev}`} 
             onClick={handlePrev}
@@ -99,8 +102,8 @@ export default function Testimonials() {
                       “{t.quote}”
                     </p>
                     <div className={styles.attrib}>
-                      <div className={styles.attribLogo}>
-                        {t.icon}
+                      <div className={styles.avatarWrapper}>
+                        <img src={t.image} alt={t.name} className={styles.avatarImage} />
                       </div>
                       <div className={styles.who}>
                         <div className={styles.name}>{t.name}</div>
