@@ -52,7 +52,7 @@ export default function Pricing() {
         {
           icon: <Activity size={12} />,
           name: "One-Tap Ambulance",
-          text: "Request cashless emergency ambulance dispatch to exact coordinates."
+          text: "Request emergency ambulance dispatch directly to exact coordinates."
         },
         {
           icon: <MessageSquare size={12} />,

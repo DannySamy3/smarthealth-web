@@ -64,11 +64,11 @@ export default function Roles() {
     },
     {
       icon: <Truck size={22} />,
-      title: "Cashless Ambulance Dispatch",
-      summary: "Emergency care when seconds count. Direct GPS coordinate dispatch with instant payments.",
+      title: "Emergency Ambulance Dispatch",
+      summary: "Emergency care when seconds count. Direct GPS coordinate dispatch to nearby emergency facilities.",
       items: [
         "One-tap request directly to GPS position",
-        "Cashless mobile money: M-Pesa, Airtel",
+        "Direct routing to closest hospital or clinic",
         "Real-time dispatch tracking status"
       ]
     },
