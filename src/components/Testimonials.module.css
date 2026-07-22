@@ -1,0 +1,201 @@
+.section {
+  padding: 8rem 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4.5rem auto;
+}
+
+.heading {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.heading em {
+  font-style: italic;
+  font-family: inherit;
+  font-weight: 800;
+  background: var(--grad-cyan-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.sliderContainer {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sliderWrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform var(--transition-slow);
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.slideContent {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+  font-style: normal;
+  letter-spacing: -0.01em;
+}
+
+.attrib {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.attribLogo {
+  color: var(--brand-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.who {
+  text-align: left;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.org {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.arrow:hover {
+  background-color: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.3);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.arrowPrev {
+  left: -70px;
+}
+
+.arrowNext {
+  right: -70px;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(15, 23, 42, 0.15);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.dotActive {
+  background-color: var(--brand-cyan);
+  transform: scale(1.25);
+  box-shadow: 0 0 8px rgba(14, 165, 233, 0.6);
+}
+
+/* ─── MEDIA QUERY BREAKPOINTS ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sliderContainer {
+    max-width: 90%;
+  }
+  
+  .arrowPrev {
+    left: -20px;
+  }
+  
+  .arrowNext {
+    right: -20px;
+  }
+  
+  .slideContent {
+    padding: 2rem 1.5rem;
+  }
+  
+  .quote {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.25rem;
+  }
+  
+  .arrow {
+    display: none; /* Hide arrows on mobile, swipe or dots are enough */
+  }
+  
+  .slideContent {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .quote {
+    font-size: 1.125rem;
+  }
+}

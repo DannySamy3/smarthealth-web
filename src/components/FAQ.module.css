@@ -1,0 +1,92 @@
+.faqSection {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.accordionContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.item {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.itemActive {
+  border-color: rgba(37, 99, 235, 0.3);
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08), var(--shadow-glow);
+}
+
+.trigger {
+  width: 100%;
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.trigger:hover {
+  color: var(--brand-cyan);
+}
+
+.icon {
+  color: var(--text-muted);
+  transition: transform var(--transition-normal), color var(--transition-fast);
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+}
+
+.iconRotated {
+  transform: rotate(180deg);
+  color: var(--brand-cyan);
+}
+
+.contentWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow) cubic-bezier(0, 1, 0, 1);
+}
+
+.contentWrapperOpen {
+  max-height: 1000px;
+  transition: max-height var(--transition-slow) cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+.content {
+  padding: 0 2rem 2rem 2rem;
+  font-size: 0.96875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  border-top: 1px solid transparent;
+}
+
+.itemActive .content {
+  border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+/* ─── MEDIA QUERY BREAKPOINTS ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .trigger {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+  }
+  .content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
