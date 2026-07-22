@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Roles from "@/components/Roles";
 import Differentiators from "@/components/Differentiators";
+import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -20,6 +21,7 @@ export default function Home() {
         <Features />
         <Roles />
         <Differentiators />
+        <Team />
         <Testimonials />
         <Pricing />
         <FAQ />

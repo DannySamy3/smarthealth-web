@@ -88,7 +88,7 @@ export default function Hero() {
 
           {/* Right Visual Phone Mockup Column */}
           <div className={styles.rightCol}>
-            <PhoneMockup activeRole="community" />
+            <PhoneMockup activeRole="community" overrideImageSrc="/images/app_roles.png" />
           </div>
 
         </div>

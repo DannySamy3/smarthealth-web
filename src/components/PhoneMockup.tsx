@@ -43,9 +43,10 @@ import styles from "./PhoneMockup.module.css";
 
 interface PhoneMockupProps {
   activeRole: "manufacturer" | "importer" | "distributor" | "institution" | "community" | "organics";
+  overrideImageSrc?: string;
 }
 
-export default function PhoneMockup({ activeRole }: PhoneMockupProps) {
+export default function PhoneMockup({ activeRole, overrideImageSrc }: PhoneMockupProps) {
   const [communitySubTab, setCommunitySubTab] = useState<"feed" | "hospitals" | "broadcast" | "consult">("broadcast");
   const [importerSubTab, setImporterSubTab] = useState<"dashboard" | "inventory" | "sales" | "more" | "add_item">("dashboard");
   const [consultView, setConsultView] = useState<"list" | "ai">("list");
@@ -59,7 +60,7 @@ export default function PhoneMockup({ activeRole }: PhoneMockupProps) {
     }
   }, [activeRole]);
 
-  const hasImageScreens = activeRole === "community" || activeRole === "importer";
+  const hasImageScreens = Boolean(overrideImageSrc) || activeRole === "community" || activeRole === "importer";
 
   const getScreenImageSrc = () => {
     if (activeRole === "community") {
@@ -217,7 +218,7 @@ export default function PhoneMockup({ activeRole }: PhoneMockupProps) {
               }}
             >
               <img 
-                src={getScreenImageSrc()} 
+                src={overrideImageSrc || getScreenImageSrc()} 
                 alt={`${activeRole} view`} 
                 style={{ width: "100%", height: "100%", objectFit: "contain" }} 
               />

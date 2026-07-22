@@ -56,6 +56,12 @@ export default function Header() {
             <a href="/#ecosystem" className={styles.navLink} onClick={(e) => handleLinkClick(e, "ecosystem")}>
               Modules
             </a>
+            <a href="/#why-us" className={styles.navLink} onClick={(e) => handleLinkClick(e, "why-us")}>
+              Why Us
+            </a>
+            <a href="/#about" className={styles.navLink} onClick={(e) => handleLinkClick(e, "about")}>
+              About Us
+            </a>
             <a href="/#pricing" className={styles.navLink} onClick={(e) => handleLinkClick(e, "pricing")}>
               Pricing
             </a>
@@ -99,6 +105,12 @@ export default function Header() {
           </a>
           <a href="/#ecosystem" className={styles.drawerLink} onClick={(e) => handleLinkClick(e, "ecosystem")}>
             Modules
+          </a>
+          <a href="/#why-us" className={styles.drawerLink} onClick={(e) => handleLinkClick(e, "why-us")}>
+            Why Us
+          </a>
+          <a href="/#about" className={styles.drawerLink} onClick={(e) => handleLinkClick(e, "about")}>
+            About Us
           </a>
           <a href="/#pricing" className={styles.drawerLink} onClick={(e) => handleLinkClick(e, "pricing")}>
             Pricing
