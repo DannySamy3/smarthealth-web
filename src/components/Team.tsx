@@ -1,6 +1,15 @@
 "use client";
 
-import { UserCheck, Code, Calculator, Mail, ShieldCheck } from "lucide-react";
+import { 
+  UserCheck, 
+  Code, 
+  Calculator, 
+  ShieldCheck, 
+  Stethoscope, 
+  Lock, 
+  LineChart,
+  Sparkles
+} from "lucide-react";
 import styles from "./Team.module.css";
 
 interface TeamMember {
@@ -17,26 +26,26 @@ export default function Team() {
   const members: TeamMember[] = [
     {
       name: "Jullu Masatu",
-      role: "Shareholder & Medical Lead",
-      badge: "Sales & Pharmacy Expert",
+      role: "Sales & Medical Operations",
+      badge: "Medical & Pharmacy Expert",
       image: "/images/team/jullu_masatu.png",
-      icon: <UserCheck size={18} />,
-      bio: "Co-Founder and Shareholder leading sales strategy, medical partnerships, and regulatory pharmacy operations across the Smart Health network."
+      icon: <Stethoscope size={18} />,
+      bio: "Co-Founder and Shareholder leading B2B sales strategy, medical partnerships, and regulatory TMDA/TFDA compliance operations."
     },
     {
       name: "Daniel Ntunduye",
-      role: "Shareholder & Technical Lead",
+      role: "Software & Technology Lead",
       badge: "Software Developer & CTO",
       image: "/images/team/daniel_ntunduye.jpg",
       icon: <Code size={18} />,
-      bio: "Co-Founder and Shareholder architecting the core software infrastructure, mobile application ecosystem, and B2B data security engines."
+      bio: "Co-Founder and Shareholder architecting the core software infrastructure, mobile app ecosystem, real-time telemetry, and B2B data engines."
     },
     {
       name: "Samwel Sokka",
-      role: "Shareholder & Finance Lead",
-      badge: "Chief Financial Officer",
+      role: "Finance & Accounting Lead",
+      badge: "Chief Financial Officer (CFO)",
       icon: <Calculator size={18} />,
-      bio: "Co-Founder and Shareholder managing financial strategy, institutional accounting, fiscal compliance, and audit operations across Smart Health.",
+      bio: "Co-Founder and Shareholder managing financial governance, institutional accounting standards, fiscal compliance, and capital allocation.",
       isPlaceholder: true
     }
   ];
@@ -45,21 +54,26 @@ export default function Team() {
     <section className={styles.section} id="about">
       <div className="container">
         
+        {/* Section Header */}
         <div className={`${styles.header} reveal-on-scroll`}>
-          <span className="section-label">About Us</span>
-          <h2 className={styles.heading}>About Smart Health & <em>Founders</em></h2>
+          <span className="section-label">About Smart Health</span>
+          <h2 className={styles.heading}>
+            Pioneering Digital Health <em>Infrastructure</em>
+          </h2>
           <p className={styles.description}>
-            Smart Health is driven by a multidisciplinary leadership team combining medical expertise, cutting-edge software engineering, and financial governance to transform healthcare across Africa.
+            Smart Health was founded by a multidisciplinary team combining medical authority, advanced software engineering, and financial governance to build Africa's most trusted healthcare network.
           </p>
         </div>
 
+        {/* Founders Grid */}
         <div className={styles.grid}>
           {members.map((member, idx) => (
             <div 
               key={idx} 
               className={`${styles.card} glass-card reveal-on-scroll delay-${idx + 1}`}
             >
-              <div className={styles.imageContainer}>
+              {/* Image Container with Gradient Overlay */}
+              <div className={styles.imageWrapper}>
                 {member.image ? (
                   <img 
                     src={member.image} 
@@ -68,31 +82,74 @@ export default function Team() {
                   />
                 ) : (
                   <div className={styles.placeholderAvatar}>
-                    <div className={styles.placeholderIcon}>
-                      {member.icon}
+                    <div className={styles.placeholderRing}>
+                      <div className={styles.placeholderIcon}>
+                        {member.icon}
+                      </div>
                     </div>
-                    <span className={styles.placeholderText}>Photo Coming Soon</span>
+                    <span className={styles.placeholderName}>Samwel Sokka</span>
+                    <span className={styles.placeholderText}>Photo Uploading Soon</span>
                   </div>
                 )}
+                <div className={styles.imageOverlay} />
                 
-                <div className={styles.roleTag}>
+                {/* Expert Badge Overlay */}
+                <div className={styles.badgeOverlay}>
                   {member.icon}
                   <span>{member.badge}</span>
                 </div>
               </div>
 
-              <div className={styles.cardContent}>
-                <div className={styles.shareholderBadge}>
-                  <ShieldCheck size={13} />
-                  <span>Shareholder</span>
+              {/* Card Details Body */}
+              <div className={styles.cardBody}>
+                <div className={styles.shareholderPill}>
+                  <ShieldCheck size={13} className={styles.shieldIcon} />
+                  <span>Founding Shareholder</span>
                 </div>
 
-                <h3 className={styles.name}>{member.name}</h3>
-                <span className={styles.roleTitle}>{member.role}</span>
-                <p className={styles.bio}>{member.bio}</p>
+                <h3 className={styles.memberName}>{member.name}</h3>
+                <span className={styles.memberRole}>{member.role}</span>
+                <p className={styles.memberBio}>{member.bio}</p>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Executive Commitment Pillars */}
+        <div className={`${styles.pillarsBar} reveal-on-scroll`}>
+          <div className={styles.pillarItem}>
+            <div className={`${styles.pillarIcon} ${styles.iconBlue}`}>
+              <Stethoscope size={20} />
+            </div>
+            <div>
+              <h4 className={styles.pillarTitle}>Medical Authority</h4>
+              <p className={styles.pillarDesc}>Verified practitioner credentials & TMDA/TFDA regulatory vaults</p>
+            </div>
+          </div>
+
+          <div className={styles.pillarDivider} />
+
+          <div className={styles.pillarItem}>
+            <div className={`${styles.pillarIcon} ${styles.iconIndigo}`}>
+              <Lock size={20} />
+            </div>
+            <div>
+              <h4 className={styles.pillarTitle}>Technical Innovation</h4>
+              <p className={styles.pillarDesc}>High-availability cloud architecture, telemetry & encrypted chats</p>
+            </div>
+          </div>
+
+          <div className={styles.pillarDivider} />
+
+          <div className={styles.pillarItem}>
+            <div className={`${styles.pillarIcon} ${styles.iconCyan}`}>
+              <LineChart size={20} />
+            </div>
+            <div>
+              <h4 className={styles.pillarTitle}>Fiscal Governance</h4>
+              <p className={styles.pillarDesc}>Transparent B2B order settlement, audit trails & financial compliance</p>
+            </div>
+          </div>
         </div>
 
       </div>
