@@ -67,33 +67,38 @@
   font-weight: 600;
   color: var(--text-secondary);
   background-color: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.1);
+  border: 1px solid rgba(203, 213, 225, 0.8);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   text-align: center;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
 }
 
 .tabBtn:hover {
-  background-color: rgba(37, 99, 235, 0.04);
-  border-color: rgba(37, 99, 235, 0.25);
+  background-color: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.3);
   color: var(--text-primary);
+  transform: translateY(-1px);
 }
 
 .activeTabBtn {
-  background-color: var(--brand-blue) !important;
-  border-color: var(--brand-blue) !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border-color: #1d4ed8 !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
 }
 
 /* Detail Display Card */
 .detailCard {
-  padding: 2.25rem;
+  padding: 2.5rem;
   min-height: 260px;
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
 }
 
 .detailBadge {

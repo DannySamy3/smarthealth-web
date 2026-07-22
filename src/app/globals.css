@@ -4,10 +4,10 @@
 :root {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
-  /* Crisp Light Theme Palette */
-  --bg-primary: #ffffff;     /* Main background, crisp white */
-  --bg-secondary: #f8fafc;   /* Section background, soft slate-50 */
-  --bg-tertiary: #f1f5f9;    /* Card and container background, slate-100 */
+  /* Crisp & Clean Light Theme Palette */
+  --bg-primary: #ffffff;     /* Crisp clean white */
+  --bg-secondary: #f8fafc;   /* Soft neutral slate-50 */
+  --bg-tertiary: #f1f5f9;    /* Soft neutral slate-100 */
   --bg-card: #ffffff;        /* Pure white cards */
   
   /* Brand Accent Colors */
@@ -34,9 +34,9 @@
   
   /* Gradients */
   --grad-primary: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
-  --grad-text: linear-gradient(135deg, #0f172a 30%, #334155 100%);
+  --grad-text: linear-gradient(135deg, #0f172a 30%, #1e293b 100%);
   --grad-cyan-blue: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
-  --grad-glow: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, rgba(37, 99, 235, 0.03) 50%, transparent 100%);
+  --grad-glow: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
   
   /* Borders and Dividers */
   --border-glow: rgba(37, 99, 235, 0.25);
@@ -44,11 +44,11 @@
   --border-medium: rgba(15, 23, 42, 0.15);
   
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
-  --shadow-glow: 0 0 25px rgba(37, 99, 235, 0.15);
-  --shadow-cyan-glow: 0 0 25px rgba(2, 132, 199, 0.12);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+  --shadow-glow: 0 0 25px rgba(37, 99, 235, 0.12);
+  --shadow-cyan-glow: 0 0 25px rgba(2, 132, 199, 0.1);
   
   /* Radii */
   --radius-sm: 6px;
@@ -293,7 +293,7 @@ em {
   transform: translateY(-4px);
 }
 
-/* ─── ANIMATIONS ──────────────────────────────────────────────────────────── */
+/* ─── ANIMATIONS & MOTION ─────────────────────────────────────────────────── */
 @keyframes orbit {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -306,12 +306,22 @@ em {
 
 @keyframes pulse-slow {
   0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.05); }
+  50% { opacity: 0.7; transform: scale(1.04); }
 }
 
 @keyframes float-subtle {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 .animate-float {
@@ -320,9 +330,28 @@ em {
 
 .animate-fade-up {
   opacity: 0;
-  transform: translateY(30px);
-  animation: fade-up-in 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  transform: translateY(24px);
+  animation: fade-up-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ─── SCROLL REVEAL ANIMATIONS ────────────────────────────────────────────── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { animation-delay: 0.1s; transition-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; transition-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; transition-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; transition-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; transition-delay: 0.5s; }
 
 @keyframes fade-up-in {
   to {

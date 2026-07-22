@@ -98,7 +98,7 @@ export default function Roles() {
 
         <div className={styles.grid}>
           {features.map((feat, idx) => (
-            <div key={idx} className={`${styles.card} glass-card animate-fade-up`}>
+            <div key={idx} className={`${styles.card} glass-card reveal-on-scroll delay-${(idx % 3) + 1}`}>
               <div className={styles.icon}>
                 {feat.icon}
               </div>

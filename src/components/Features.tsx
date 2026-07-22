@@ -131,7 +131,7 @@ export default function Features() {
         <div className={styles.grid}>
           
           {/* Details & Selector Column */}
-          <div className={`${styles.leftColumn} animate-fade-up`}>
+          <div className={`${styles.leftColumn} reveal-on-scroll delay-1`}>
             <span className={styles.selectorTitle}>Select a Node Workspace</span>
             
             <div className={styles.tabs} id="demo-role-tabs">
@@ -165,7 +165,7 @@ export default function Features() {
           </div>
 
           {/* Interactive Phone Mockup Column */}
-          <div className={styles.visualColumn}>
+          <div className={`${styles.visualColumn} reveal-on-scroll delay-2`}>
             <PhoneMockup activeRole={activeRole} />
           </div>
 

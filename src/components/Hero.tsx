@@ -26,9 +26,9 @@ export default function Hero() {
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    const particleCount = 45;
-    const connectionDistance = 100;
-    const mouseConnectionDistance = 140;
+    const particleCount = 65;
+    const connectionDistance = 120;
+    const mouseConnectionDistance = 160;
 
     const resizeCanvas = () => {
       if (canvas && containerRef.current) {
@@ -47,9 +47,9 @@ export default function Hero() {
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.35,
-          vy: (Math.random() - 0.5) * 0.35,
-          radius: Math.random() * 2 + 1,
+          vx: (Math.random() - 0.5) * 0.9,
+          vy: (Math.random() - 0.5) * 0.9,
+          radius: Math.random() * 2.5 + 1,
         });
       }
     };

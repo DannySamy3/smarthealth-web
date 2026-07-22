@@ -7,10 +7,12 @@ import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import ScrollObserver from "@/components/ScrollObserver";
 
 export default function Home() {
   return (
     <>
+      <ScrollObserver />
       <Header />
       
       <main style={{ marginTop: "var(--header-height)" }}>

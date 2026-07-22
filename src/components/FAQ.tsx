@@ -53,7 +53,7 @@ export default function FAQ() {
             return (
               <div 
                 key={idx} 
-                className={`${styles.item} ${isActive ? styles.itemActive : ""}`}
+                className={`${styles.item} ${isActive ? styles.itemActive : ""} reveal-on-scroll delay-${(idx % 4) + 1}`}
                 id={`faq-item-${idx}`}
               >
                 <button 

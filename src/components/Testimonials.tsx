@@ -70,7 +70,7 @@ export default function Testimonials() {
           <h2 className={styles.heading}>Trusted by Healthcare <em>Professionals</em></h2>
         </div>
 
-        <div className={styles.sliderContainer}>
+        <div className={`${styles.sliderContainer} reveal-on-scroll`}>
           <button 
             className={`${styles.arrow} ${styles.arrowPrev}`} 
             onClick={handlePrev}

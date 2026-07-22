@@ -13,17 +13,17 @@ export default function Differentiators() {
     {
       num: "01",
       title: "For the Supply Chain: Counterfeit Eradication",
-      text: "We protect lives by eliminating fake medications. Every importer, distributor, manufacturer, and pharmacy is legally verified via BRELA and TFDA credentials, and every batch number is tracked from production to shelf."
+      text: "Protect the supply chain by eliminating fake medications. Every manufacturer, importer, distributor, and health institution is verified via BRELA, TFDA, and Pharmacy Board credentials, with full batch, strength, and expiry tracking from production line to dispensary."
     },
     {
       num: "02",
       title: "For the Economy: Digital Medical Commerce",
-      text: "Digitize the informal medical sector. Small clinics, pharmacies, and local dispensaries can procure bulk items safely, review transparent catalogs, and request direct B2B shipments without fragmented middleman pricing."
+      text: "Digitize B2B pharmaceutical procurement. Importers, distributors, clinics, and local pharmacies manage MOQ controls, review transparent bulk catalogs, and fulfill multi-stage purchase orders directly with integrated mobile payment status tracking."
     },
     {
       num: "03",
-      title: "For the Patient: Emergency Anxiety Erased",
-      text: "Access critical care immediately. Whether you need an ambulance dispatch at midnight, a virtual telemedicine consultation, or a broadcast order for a hard-to-find prescription, it takes just a single tap."
+      title: "For the Patient: Emergency Care & Consultation",
+      text: "Access critical care instantly. Request real-time GPS ambulance dispatches with mobile money payments, book verified doctor appointments, launch 1-on-1 chats, and broadcast prescription photos to receive live stock bids from local pharmacies."
     }
   ];
 
@@ -38,7 +38,7 @@ export default function Differentiators() {
 
         <div className={styles.editorial}>
           {diffs.map((diff, idx) => (
-            <div key={idx} className={`${styles.row} animate-fade-up`}>
+            <div key={idx} className={`${styles.row} reveal-on-scroll delay-${idx + 1}`}>
               <span className={styles.number} aria-hidden="true">{diff.num}</span>
               <div className={styles.content}>
                 <h3 className={styles.rowTitle}>{diff.title}</h3>

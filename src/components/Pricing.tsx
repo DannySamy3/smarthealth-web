@@ -137,10 +137,10 @@ export default function Pricing() {
         </div>
 
         <div className={styles.grid}>
-          {plans.map((plan) => (
+          {plans.map((plan, idx) => (
             <div 
               key={plan.id} 
-              className={`${styles.card} ${plan.featured ? styles.featuredCard : ""} glass-card animate-fade-up`}
+              className={`${styles.card} ${plan.featured ? styles.featuredCard : ""} glass-card reveal-on-scroll delay-${idx + 1}`}
             >
               <div className={styles.planMeta}>
                 <span className={styles.planTitle}>{plan.title}</span>
