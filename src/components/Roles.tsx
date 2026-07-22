@@ -23,11 +23,11 @@ export default function Roles() {
     {
       icon: <ShieldCheck size={22} />,
       title: "Triple-Layer Verification",
-      summary: "Absolute trust and safety. Every supplier, doctor, and node is audited before interacting with patients.",
+      summary: "Absolute trust and safety. Every professional is audited with physical documents before interacting with patients.",
       items: [
-        "Business checks: TFDA, BRELA & TIN",
-        "Professional check: credentials verification",
-        "Security layer: JWT sessions & RBAC auth"
+        "Identity verification via National ID uploads",
+        "Mandatory Medical & Technical Certificate checks",
+        "Profile status tracking (Pending, Approved, Rejected)"
       ]
     },
     {
@@ -65,21 +65,21 @@ export default function Roles() {
     {
       icon: <Truck size={22} />,
       title: "Emergency Ambulance Dispatch",
-      summary: "Emergency care when seconds count. Direct GPS coordinate dispatch to nearby emergency facilities.",
+      summary: "Emergency care when seconds count. Direct GPS coordinate dispatch with seamless digital payments.",
       items: [
-        "One-tap request directly to GPS position",
-        "Direct routing to closest hospital or clinic",
-        "Real-time dispatch tracking status"
+        "One-tap request using direct GPS positioning",
+        "Integrated payments via Mobile Money (M-Pesa, Tigo) & Cards",
+        "Real-time dispatch tracking (Pending, En-Route, Arrived)"
       ]
     },
     {
       icon: <Users size={22} />,
-      title: "Shared Community Feed",
-      summary: "Collaborative health network linking experts and everyday users to discuss medical topics and share media.",
+      title: "Direct Professional Consultations",
+      summary: "Secure, one-on-one encrypted chat rooms linking everyday users directly with verified medical professionals.",
       items: [
-        "Open channels for patient-to-doctor chat",
-        "Share health-related posts, images & videos",
-        "Peer networking forums for verified professionals"
+        "Book appointments with verified doctors & specialists",
+        "Private patient-to-doctor 1-on-1 chat rooms",
+        "Interactive comments on targeted health campaigns"
       ]
     }
   ];
