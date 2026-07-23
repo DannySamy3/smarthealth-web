@@ -1,8 +1,8 @@
 .footer {
-  background-color: var(--bg-primary);
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  background-color: #0b1329;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 6rem 0 3rem 0;
-  color: var(--text-secondary);
+  color: #94a3b8;
 }
 
 .grid {
@@ -24,14 +24,15 @@
   gap: 0.75rem;
   font-weight: 800;
   font-size: 1.35rem;
-  color: var(--text-primary);
+  color: #ffffff;
   letter-spacing: -0.03em;
+  text-decoration: none;
 }
 
 .logo em {
   font-style: italic;
   font-weight: 800;
-  background: var(--grad-primary);
+  background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -44,19 +45,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 }
 
 .logoImg {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
 .description {
   font-size: 0.9375rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   line-height: 1.6;
   max-width: 320px;
 }
@@ -75,17 +76,17 @@
   width: 38px;
   height: 38px;
   border-radius: var(--radius-md);
-  background-color: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  color: var(--text-muted);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-fast);
 }
 
 .socialLink:hover {
-  background-color: rgba(15, 23, 42, 0.04);
-  border-color: rgba(15, 23, 42, 0.3);
-  color: var(--text-primary);
+  background-color: rgba(29, 78, 216, 0.3);
+  border-color: rgba(96, 165, 250, 0.4);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -100,7 +101,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-primary);
+  color: #f8fafc;
 }
 
 .links {
@@ -111,17 +112,18 @@
 
 .link {
   font-size: 0.9375rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   transition: color var(--transition-fast);
+  text-decoration: none;
 }
 
 .link:hover {
-  color: var(--brand-cyan);
+  color: #60a5fa;
 }
 
 /* Compliance Badges */
 .complianceBadges {
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 2rem;
   margin-top: 1.5rem;
   width: 100%;
@@ -132,7 +134,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-muted);
+  color: #64748b;
   margin-bottom: 1rem;
   display: block;
 }
@@ -149,19 +151,20 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-muted);
-  opacity: 0.55;
+  color: #cbd5e1;
+  opacity: 0.7;
   transition: opacity var(--transition-fast);
   cursor: default;
 }
 
 .badge:hover {
-  opacity: 0.9;
+  opacity: 1;
+  color: #ffffff;
 }
 
 .bottomBar {
   padding-top: 2.5rem;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -171,7 +174,7 @@
 
 .copyright {
   font-size: 0.875rem;
-  color: var(--text-light);
+  color: #64748b;
 }
 
 .bottomLinks {
@@ -182,12 +185,13 @@
 
 .bottomLink {
   font-size: 0.875rem;
-  color: var(--text-light);
+  color: #64748b;
   transition: color var(--transition-fast);
+  text-decoration: none;
 }
 
 .bottomLink:hover {
-  color: var(--brand-cyan);
+  color: #60a5fa;
 }
 
 /* ─── RESPONSIVE BREAKPOINTS ──────────────────────────────────────────────── */

@@ -229,11 +229,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background: #ffffff;
-  border: 1px solid rgba(203, 213, 225, 0.9);
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
   padding: 2.25rem 3rem;
-  box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.3);
 }
 
 .pillarItem {
@@ -254,41 +254,41 @@
 }
 
 .iconBlue {
-  background-color: rgba(29, 78, 216, 0.08);
-  color: var(--brand-blue);
-  border: 1px solid rgba(29, 78, 216, 0.2);
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
 .iconIndigo {
-  background-color: rgba(79, 70, 229, 0.08);
-  color: #4f46e5;
-  border: 1px solid rgba(79, 70, 229, 0.2);
+  background-color: rgba(129, 140, 248, 0.12);
+  color: #818cf8;
+  border: 1px solid rgba(129, 140, 248, 0.25);
 }
 
 .iconCyan {
-  background-color: rgba(2, 132, 199, 0.08);
-  color: var(--brand-cyan);
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
 .pillarTitle {
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #ffffff;
   margin-bottom: 0.35rem;
   line-height: 1.2;
 }
 
 .pillarDesc {
   font-size: 0.84375rem;
-  color: var(--text-muted);
+  color: #cbd5e1;
   line-height: 1.5;
 }
 
 .pillarDivider {
   width: 1px;
   height: 60px;
-  background-color: rgba(15, 23, 42, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   flex-shrink: 0;
 }
 

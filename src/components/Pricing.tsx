@@ -1,7 +1,6 @@
 "use client";
 
 import { 
-  ArrowRight, 
   Smartphone, 
   Activity, 
   MessageSquare, 
@@ -9,7 +8,6 @@ import {
   Users,
   Building,
   Sparkles,
-  Download,
   Database
 } from "lucide-react";
 import styles from "./Pricing.module.css";
@@ -168,14 +166,6 @@ export default function Pricing() {
                 ))}
               </div>
 
-              <button 
-                className={styles.downloadBtn} 
-                onClick={() => alert(`Smart Health mobile app download initiated for ${plan.title}`)}
-              >
-                <Download size={14} />
-                <span>Get Smart Health App</span>
-                <ArrowRight size={14} />
-              </button>
             </div>
           ))}
         </div>

@@ -105,10 +105,10 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1rem 1.5rem;
-  background-color: var(--bg-secondary);
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.25);
 }
 
 .statItem {
@@ -119,20 +119,20 @@
 .statVal {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--brand-blue);
+  color: #38bdf8;
   line-height: 1.2;
 }
 
 .statLbl {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #cbd5e1;
 }
 
 .statDivider {
   width: 1px;
   height: 28px;
-  background-color: rgba(15, 23, 42, 0.12);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Right Column Visual Card Stack */

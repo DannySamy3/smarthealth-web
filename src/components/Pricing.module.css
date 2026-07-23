@@ -81,9 +81,43 @@
 }
 
 .featuredCard {
-  border-color: rgba(37, 99, 235, 0.35);
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, #ffffff 100%);
+  border-color: rgba(96, 165, 250, 0.4);
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
   position: relative;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.35), 0 0 30px rgba(29, 78, 216, 0.18);
+}
+
+.featuredCard .planTitle,
+.featuredCard .amount {
+  color: #ffffff;
+}
+
+.featuredCard .planSubtitle,
+.featuredCard .currency,
+.featuredCard .priceSub {
+  color: #cbd5e1;
+}
+
+.featuredCard .planFeeNote {
+  color: #38bdf8;
+}
+
+.featuredCard .benefitsList {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.featuredCard .benefitName {
+  color: #f8fafc;
+}
+
+.featuredCard .benefitText {
+  color: #94a3b8;
+}
+
+.featuredCard .benefitIcon {
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.25);
 }
 
 .featuredCard::before {
@@ -92,14 +126,14 @@
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--grad-primary);
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
   color: #ffffff;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
 }
 
 .planMeta {

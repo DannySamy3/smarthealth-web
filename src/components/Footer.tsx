@@ -26,7 +26,7 @@ export default function Footer() {
               <span>Smart <em>Health</em></span>
             </a>
             <p className={styles.description}>
-              The secure compliance, traceability, and distribution network for global healthcare supply chains. Connecting manufacturers, importers, distributors, patients, and pharmacy shelves.
+              The secure compliance, traceability, and distribution network for global healthcare supply chains.
             </p>
             <div className={styles.socials}>
               <a href="#" className={styles.socialLink} aria-label="Smart Health on Twitter">
@@ -48,13 +48,10 @@ export default function Footer() {
             <span className={styles.title}>Product</span>
             <nav className={styles.links}>
               <a href="#ecosystem-demo" className={styles.link} onClick={(e) => handleLinkClick(e, "ecosystem-demo")}>
-                Core Features
+                Platform Overview
               </a>
               <a href="#ecosystem" className={styles.link} onClick={(e) => handleLinkClick(e, "ecosystem")}>
                 Ecosystem Roles
-              </a>
-              <a href="#ecosystem-demo" className={styles.link} onClick={(e) => handleLinkClick(e, "ecosystem-demo")}>
-                Interactive Demo
               </a>
               <a href="#pricing" className={styles.link} onClick={(e) => handleLinkClick(e, "pricing")}>
                 Pricing & Plans
@@ -66,16 +63,13 @@ export default function Footer() {
             <span className={styles.title}>Developer</span>
             <nav className={styles.links}>
               <a href="#" className={styles.link}>
-                API Reference
-              </a>
-              <a href="#" className={styles.link}>
-                Docker Setup
-              </a>
-              <a href="#" className={styles.link}>
-                Prisma Schema
+                API Documentation
               </a>
               <a href="#" className={styles.link}>
                 System Status
+              </a>
+              <a href="#" className={styles.link}>
+                Developer Hub
               </a>
             </nav>
           </div>
@@ -83,14 +77,11 @@ export default function Footer() {
           <div className={styles.column}>
             <span className={styles.title}>Company</span>
             <nav className={styles.links}>
-              <a href="#" className={styles.link}>
+              <a href="#about" className={styles.link} onClick={(e) => handleLinkClick(e, "about")}>
                 About Us
               </a>
               <a href="#" className={styles.link}>
                 Case Studies
-              </a>
-              <a href="#" className={styles.link}>
-                Press Kit
               </a>
               <a href="#" className={styles.link}>
                 Contact Sales
@@ -101,17 +92,14 @@ export default function Footer() {
           <div className={styles.column}>
             <span className={styles.title}>Compliance</span>
             <nav className={styles.links}>
-              <a href="#pricing" className={styles.link} onClick={(e) => handleLinkClick(e, "pricing")}>
-                GDPR & HIPAA
-              </a>
               <a href="#" className={styles.link}>
-                TFDA Regulations
-              </a>
-              <a href="#" className={styles.link}>
-                Pharmacy Council
+                Regulatory Framework
               </a>
               <a href="#" className={styles.link}>
                 Security Audits
+              </a>
+              <a href="#" className={styles.link}>
+                Data Privacy
               </a>
             </nav>
           </div>
@@ -129,7 +117,7 @@ export default function Footer() {
 
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>
-            &copy; {currentYear} Smart Health Inc. All rights reserved. Registered under medical B2B distribution licensing.
+            &copy; {currentYear} Smart Health Inc. All rights reserved.
           </p>
           <div className={styles.bottomLinks}>
             <a href="/privacy" className={styles.bottomLink}>

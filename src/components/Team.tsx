@@ -28,29 +28,29 @@ export default function Team() {
     {
       name: "Jullu Masatu",
       role: "Sales & Medical Operations",
-      badge: "Medical & Pharmacy Expert",
+      badge: "Medical & Pharmacy Lead",
       image: "/images/team/jullu_masatu.png",
       objectPosition: "center 10%",
       icon: <Stethoscope size={18} />,
-      bio: "Co-Founder and Shareholder leading B2B sales strategy, medical partnerships, and regulatory TMDA/TFDA compliance operations."
+      bio: "Co-Founder leading B2B sales strategy, medical partnerships, and regulatory TMDA/TFDA compliance operations."
     },
     {
       name: "Daniel Ntunduye",
       role: "Software & Technology Lead",
-      badge: "Software Developer & CTO",
+      badge: "CTO & Platform Architect",
       image: "/images/team/daniel_ntunduye.jpg",
       objectPosition: "center 10%",
       icon: <Code size={18} />,
-      bio: "Co-Founder and Shareholder architecting the core software infrastructure, mobile app ecosystem, real-time telemetry, and B2B data engines."
+      bio: "Co-Founder architecting core software infrastructure, mobile app ecosystem, real-time telemetry, and data engines."
     },
     {
       name: "Samwel Soka",
       role: "Finance & Accounting Lead",
-      badge: "Chief Financial Officer (CFO)",
+      badge: "CFO & Governance Lead",
       image: "/images/team/samwel_sokka.jpg",
       objectPosition: "center 28%",
       icon: <Calculator size={18} />,
-      bio: "Co-Founder and Shareholder managing financial governance, institutional accounting standards, fiscal compliance, and capital allocation."
+      bio: "Co-Founder managing financial governance, institutional accounting standards, fiscal compliance, and capital allocation."
     }
   ];
 
