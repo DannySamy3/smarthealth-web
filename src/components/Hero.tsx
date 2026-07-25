@@ -13,6 +13,7 @@ import {
   FileCheck
 } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
+import StoreButtons from "@/components/StoreButtons";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -46,24 +47,9 @@ export default function Hero() {
               Smart Health connects pharmaceutical supply chains with instant patient care. Securely procure bulk medicines, broadcast prescription requests to local pharmacies, consult verified doctors, and dispatch emergency ambulances in a single unified network.
             </p>
 
+            {/* App Store & Google Play Store Download Buttons */}
             <div className={styles.buttons}>
-              <a 
-                href="#ecosystem-demo" 
-                className="button button--primary"
-                onClick={(e) => handleScrollClick(e, "ecosystem-demo")}
-              >
-                Explore App Showcase
-                <span className="button-icon">
-                  <ArrowRight size={15} strokeWidth={2.5} />
-                </span>
-              </a>
-              <a 
-                href="#ecosystem" 
-                className="button button--outline-light"
-                onClick={(e) => handleScrollClick(e, "ecosystem")}
-              >
-                For Businesses & Clinics
-              </a>
+              <StoreButtons size="md" align="left" />
             </div>
 
             {/* Quick Stats Banner */}

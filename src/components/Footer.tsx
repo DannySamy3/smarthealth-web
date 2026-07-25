@@ -1,6 +1,7 @@
 "use client";
 
 import { HeartPulse, ShieldAlert } from "lucide-react";
+import StoreButtons from "./StoreButtons";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -28,6 +29,11 @@ export default function Footer() {
             <p className={styles.description}>
               The secure compliance, traceability, and distribution network for global healthcare supply chains.
             </p>
+            
+            <div style={{ marginTop: "1rem", marginBottom: "1.25rem" }}>
+              <StoreButtons size="sm" align="left" />
+            </div>
+
             <div className={styles.socials}>
               <a href="#" className={styles.socialLink} aria-label="Smart Health on Twitter">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
