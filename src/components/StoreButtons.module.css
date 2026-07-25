@@ -79,20 +79,20 @@
 }
 
 .blueBtn {
-  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.35);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.35);
 }
 
 .blueBtn:hover {
-  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
-  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.45);
-  border-color: #ffffff;
+  background: linear-gradient(135deg, #172554 0%, #1e3a8a 100%);
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.5);
+  border-color: rgba(96, 165, 250, 0.6);
 }
 
 .blueBtn .subtext {
-  color: #dbeafe;
+  color: #93c5fd;
 }
 
 .darkBtn {
