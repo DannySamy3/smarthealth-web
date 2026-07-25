@@ -8,7 +8,11 @@ import {
   Users,
   Building,
   Sparkles,
-  Database
+  Database,
+  Megaphone,
+  Clock,
+  Calendar,
+  Layers
 } from "lucide-react";
 import styles from "./Pricing.module.css";
 
@@ -17,7 +21,9 @@ interface PlanDetail {
   title: string;
   subtitle: string;
   amount: string;
+  currency: string;
   priceSub: string;
+  convertedPrice: string;
   feeNote: string;
   featured?: boolean;
   benefits: {
@@ -33,8 +39,10 @@ export default function Pricing() {
       id: "community",
       title: "Community Account",
       subtitle: "For Patients & Everyday Users",
+      currency: "TSh",
       amount: "0",
       priceSub: "forever",
+      convertedPrice: "Free ($0 USD)",
       feeNote: "1.5% transaction fee on completed pharmacy bids",
       benefits: [
         {
@@ -63,8 +71,10 @@ export default function Pricing() {
       id: "professional",
       title: "Professional Plan",
       subtitle: "For Doctors, Nurses & Pharmacists",
-      amount: "80,000",
+      currency: "$",
+      amount: "5",
       priceSub: "/month",
+      convertedPrice: "~TSh 13,500 / month",
       feeNote: "2.5% transaction fee on patient consultation bookings",
       featured: true,
       benefits: [
@@ -80,8 +90,8 @@ export default function Pricing() {
         },
         {
           icon: <Sparkles size={12} />,
-          name: "Shared Community Feed",
-          text: "Discuss medical topics, share case feeds, and network with peers."
+          name: "Free Community Feed Posting",
+          text: "Publish medical cases, peer insights, and clinical discussions for free."
         },
         {
           icon: <Bot size={12} />,
@@ -94,8 +104,10 @@ export default function Pricing() {
       id: "business",
       title: "B2B Business Plan",
       subtitle: "For Importers, Manufacturers, Clinics, Organics",
-      amount: "270,000",
-      priceSub: "/month",
+      currency: "$",
+      amount: "0",
+      priceSub: "monthly fee",
+      convertedPrice: "Pay per transaction & ad only",
       feeNote: "1.8% transaction fee on completed B2B procurement orders",
       benefits: [
         {
@@ -115,8 +127,8 @@ export default function Pricing() {
         },
         {
           icon: <Sparkles size={12} />,
-          name: "Role-Targeted Ads",
-          text: "Promote items on community feeds targeting Hospital Directors directly."
+          name: "Pay-Per-Ad Promotion",
+          text: "No fixed monthly fee — pay only per transaction made & targeted ad pass."
         }
       ]
     }
@@ -130,7 +142,7 @@ export default function Pricing() {
           <span className="section-label">Pricing & Fees</span>
           <h2 className={styles.heading}>Subscription <em>Plans & Fees</em></h2>
           <p className={styles.description}>
-            Patients use Smart Health for free. Professional and business roles subscribe to secure custom nodes, with flat transaction fees applied to app sales.
+            Patients use Smart Health for free. Professionals pay $5/mo, and B2B roles have zero monthly subscription fees — paying only for completed transactions & targeted ads.
           </p>
         </div>
 
@@ -146,10 +158,15 @@ export default function Pricing() {
                 <span className={styles.planFeeNote}>{plan.feeNote}</span>
               </div>
 
-              <div className={styles.planPrice}>
-                <span className={styles.currency}>TSh</span>
-                <span className={styles.amount}>{plan.amount}</span>
-                <span className={styles.priceSub}> {plan.priceSub}</span>
+              <div className={styles.priceContainer}>
+                <div className={styles.planPrice}>
+                  <span className={styles.currency}>{plan.currency}</span>
+                  <span className={styles.amount}>{plan.amount}</span>
+                  <span className={styles.priceSub}> {plan.priceSub}</span>
+                </div>
+                <div className={styles.convertedBadge}>
+                  {plan.convertedPrice}
+                </div>
               </div>
 
               <div className={styles.benefitsList}>
@@ -170,7 +187,63 @@ export default function Pricing() {
           ))}
         </div>
 
+        {/* Commercial B2B Feed & Ad Posting Rates */}
+        <div className={styles.postingSection}>
+          <div className={styles.postingHeader}>
+            <div className={styles.postingBadgeWrapper}>
+              <Megaphone size={16} />
+              <span>Commercial & Product Ad Rates</span>
+            </div>
+            <h3 className={styles.postingTitle}>Targeted Ad & Commercial Post Rates</h3>
+            <p className={styles.postingSubtitle}>
+              Patients, Doctors, Nurses & Pharmacists post on the feed for <strong>FREE</strong>. Commercial B2B roles (Importers, Manufacturers, Clinics, Organics) pay standard promotion rates for targeted product ads:
+            </p>
+          </div>
+
+          <div className={styles.postingGrid}>
+            <div className={styles.postingCard}>
+              <div className={styles.postingIconWrap}>
+                <Clock size={20} />
+              </div>
+              <span className={styles.postingDuration}>24-Hour Commercial Post</span>
+              <div className={styles.postingPriceBox}>
+                <span className={styles.postingAmount}>$1</span>
+                <span className={styles.postingUnit}>USD / 24hrs</span>
+              </div>
+              <span className={styles.postingTsh}>~TSh 2,700</span>
+              <p className={styles.postingDesc}>Single targeted product ad active on community feeds for 24 hours.</p>
+            </div>
+
+            <div className={styles.postingCard}>
+              <div className={styles.postingIconWrap}>
+                <Calendar size={20} />
+              </div>
+              <span className={styles.postingDuration}>Weekly Ad Pass</span>
+              <div className={styles.postingPriceBox}>
+                <span className={styles.postingAmount}>$10</span>
+                <span className={styles.postingUnit}>USD / week</span>
+              </div>
+              <span className={styles.postingTsh}>~TSh 27,000</span>
+              <p className={styles.postingDesc}>7-day targeted promo pass with priority feed positioning.</p>
+            </div>
+
+            <div className={`${styles.postingCard} ${styles.postingCardFeatured}`}>
+              <div className={styles.postingIconWrap}>
+                <Layers size={20} />
+              </div>
+              <span className={styles.postingDuration}>Monthly Unlimited Ad Pass</span>
+              <div className={styles.postingPriceBox}>
+                <span className={styles.postingAmount}>$30</span>
+                <span className={styles.postingUnit}>USD / month</span>
+              </div>
+              <span className={styles.postingTsh}>~TSh 81,000</span>
+              <p className={styles.postingDesc}>30-day unlimited commercial posts & targeted ad campaigns.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
 }
+

@@ -53,7 +53,7 @@ export default function TermsPage() {
               <ul>
                 <li><strong>B2B Purchasing:</strong> Bulk orders between Institutions and Importers/Manufacturers are subject to agreed delivery timelines and payment terms (Cash on Delivery vs. Credit terms).</li>
                 <li><strong>Ambulance Booking Fees:</strong> Emergency ambulance requests require payment processing via integrated mobile money channels (M-Pesa, Tigo Pesa, Airtel Money, HaloPesa) or secure card APIs. Cancellation fees may apply once a carrier is marked "En-Route".</li>
-                <li><strong>Platform Transaction Fees:</strong> Platform subscription plans (TSh 80,000/mo for Professionals and TSh 270,000/mo for B2B nodes) and transactional fees (2.5% on patient consultations, 1.8% on B2B procurement, and 1.5% on pharmacy bids) are billed automatically.</li>
+                <li><strong>Platform Subscription & Feed Posting Fees:</strong> Professional subscription plans ($5 USD/mo or ~TSh 13,500/mo for Doctors, Nurses & Pharmacists). B2B Business accounts carry zero monthly subscription fees ($0/mo), paying only per completed transaction (1.8% procurement fee) and selected ad passes ($1 USD/24h, $10 USD/week, or $30 USD/month). Feed posting is free for Everyday Patients, Doctors, Nurses & Pharmacists. Transactional fees (2.5% on patient consultations, 1.8% on B2B procurement, and 1.5% on pharmacy bids) are billed automatically.</li>
               </ul>
 
               <h2>5. Community Guidelines & Intellectual Property</h2>
