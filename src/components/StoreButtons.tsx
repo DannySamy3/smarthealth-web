@@ -12,10 +12,10 @@ export default function StoreButtons({ size = "md", align = "left" }: StoreButto
   return (
     <div className={`${styles.wrapper} ${styles[align]}`}>
       <div className={`${styles.buttonsGroup} ${styles[size]}`}>
-        {/* Apple App Store Button */}
+        {/* Apple App Store Button (Vibrant Brand Blue) */}
         <a 
           href="#download-app" 
-          className={styles.storeBtn}
+          className={`${styles.storeBtn} ${styles.blueBtn}`}
           aria-label="Download Smart Health on Apple App Store"
         >
           <div className={styles.iconWrap}>
@@ -29,10 +29,10 @@ export default function StoreButtons({ size = "md", align = "left" }: StoreButto
           </div>
         </a>
 
-        {/* Google Play Store Button */}
+        {/* Google Play Store Button (Sleek Dark Black) */}
         <a 
           href="#download-app" 
-          className={styles.storeBtn}
+          className={`${styles.storeBtn} ${styles.darkBtn}`}
           aria-label="Get Smart Health on Google Play Store"
         >
           <div className={styles.iconWrap}>

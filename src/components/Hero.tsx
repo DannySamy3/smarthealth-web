@@ -52,24 +52,6 @@ export default function Hero() {
               <StoreButtons size="md" align="left" />
             </div>
 
-            {/* Quick Stats Banner */}
-            <div className={styles.statsRow}>
-              <div className={styles.statItem}>
-                <span className={styles.statVal}>100%</span>
-                <span className={styles.statLbl}>Verified Entities</span>
-              </div>
-              <div className={styles.statDivider} />
-              <div className={styles.statItem}>
-                <span className={styles.statVal}>24/7</span>
-                <span className={styles.statLbl}>GPS Emergency</span>
-              </div>
-              <div className={styles.statDivider} />
-              <div className={styles.statItem}>
-                <span className={styles.statVal}>TFDA</span>
-                <span className={styles.statLbl}>Licensed Vault</span>
-              </div>
-            </div>
-
           </div>
 
           {/* Right Visual Phone Mockup Column */}
