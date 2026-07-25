@@ -158,3 +158,11 @@
 .lg .subtext {
   font-size: 0.7rem;
 }
+
+@media (max-width: 640px) {
+  .buttonsGroup {
+    justify-content: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+}
