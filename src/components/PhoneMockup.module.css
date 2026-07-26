@@ -1,6 +1,7 @@
 .phoneChassis {
   position: relative;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 640px;
   background-color: #0f172a; /* Deep Slate frame */
   border-radius: 42px;
@@ -12,6 +13,16 @@
   margin: 0 auto;
   transition: all var(--transition-slow);
   animation: phoneFloat 6s ease-in-out infinite;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .phoneChassis {
+    max-width: 290px;
+    height: 580px;
+    padding: 8px;
+    border-radius: 36px;
+  }
 }
 
 @keyframes phoneFloat {
