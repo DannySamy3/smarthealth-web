@@ -160,9 +160,24 @@
 }
 
 @media (max-width: 640px) {
+  .wrapper {
+    width: 100%;
+  }
+  
   .buttonsGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
     width: 100%;
-    gap: 0.75rem;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 0.85rem;
+  }
+
+  .storeBtn {
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
   }
 }
