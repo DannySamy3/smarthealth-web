@@ -376,6 +376,8 @@ em {
 @media (max-width: 768px) {
   h1 { font-size: 2.25rem; }
   h2 { font-size: 1.75rem; }
-  .section { padding: 4.5rem 0; }
+  .section { padding: 4.5rem 0; overflow: hidden; }
   .button { padding: 0.875rem 1.75rem; font-size: 0.875rem; }
+  .container { padding: 0 1.25rem; }
 }
+
